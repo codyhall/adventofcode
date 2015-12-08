@@ -49,7 +49,7 @@
           check-tokens (into #{} (map vec (partition 2 1 (rest (rest s)))))]
       (if (not (empty? (clojure.set/intersection first-token check-tokens)))
         true
-        (pair-twice (rest s)))
+        (pair-twice? (rest s)))
       )))
 
 (defn sandwich? [s]
